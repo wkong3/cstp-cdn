@@ -14,7 +14,7 @@ class UploadController extends Controller
         $error = false;
 
         if ($request->images) {
-            $allowedFileExtension = ['jpg', 'png'];
+            $allowedFileExtension = ['jpeg', 'jpg', 'png'];
 
             foreach ($request->images as $key => $value) {
                 if (preg_match('/^data:image\/(\w+);base64,/', $value['image'])) {
